@@ -9,9 +9,12 @@ plugins {
 
 repositories {
     // Use the plugin portal to apply community plugins in convention plugins.
+
     gradlePluginPortal()
+
 }
 
 dependencies {
     implementation("org.jetbrains.kotlin:kotlin-gradle-plugin:1.8.10")
+    implementation("io.micronaut.gradle:micronaut-gradle-plugin:3.7.8")
 }

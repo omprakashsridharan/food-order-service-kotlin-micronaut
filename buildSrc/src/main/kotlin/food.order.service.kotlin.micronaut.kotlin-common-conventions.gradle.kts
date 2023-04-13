@@ -5,7 +5,10 @@
 plugins {
     // Apply the org.jetbrains.kotlin.jvm Plugin to add support for Kotlin.
     id("org.jetbrains.kotlin.jvm")
+    id("org.jetbrains.kotlin.kapt")
+    id("io.micronaut.application")
 }
+
 
 repositories {
     // Use Maven Central for resolving dependencies.
@@ -17,6 +20,16 @@ dependencies {
         // Define dependency versions as constraints
         implementation("org.apache.commons:commons-text:1.10.0")
     }
+    kapt("io.micronaut:micronaut-http-validation")
+    implementation("io.micronaut:micronaut-jackson-databind")
+    implementation("io.micronaut.kotlin:micronaut-kotlin-runtime")
+    implementation("jakarta.annotation:jakarta.annotation-api")
+    implementation("org.jetbrains.kotlin:kotlin-reflect")
+    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+    runtimeOnly("ch.qos.logback:logback-classic")
+    implementation("io.micronaut:micronaut-validation")
+
+    runtimeOnly("com.fasterxml.jackson.module:jackson-module-kotlin")
 
     // Use JUnit Jupiter for testing.
     testImplementation("org.junit.jupiter:junit-jupiter:5.9.1")
@@ -26,3 +39,12 @@ tasks.named<Test>("test") {
     // Use JUnit Platform for unit tests.
     useJUnitPlatform()
 }
+
+//micronaut {
+//    runtime("netty")
+//    testRuntime("junit5")
+//    processing {
+//        incremental(true)
+//        annotations("com.example.*")
+//    }
+//}

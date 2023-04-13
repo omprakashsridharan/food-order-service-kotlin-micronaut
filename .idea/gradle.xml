@@ -22,7 +22,7 @@
             <option value="$PROJECT_DIR$/buildSrc" />
             <option value="$PROJECT_DIR$/common" />
             <option value="$PROJECT_DIR$/orderservice" />
-            <option value="$PROJECT_DIR$/orderservice/container" />
+            <option value="$PROJECT_DIR$/orderservice/applicationservice" />
             <option value="$PROJECT_DIR$/orderservice/core" />
           </set>
         </option>

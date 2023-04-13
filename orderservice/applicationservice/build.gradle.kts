@@ -4,9 +4,13 @@
 
 plugins {
     id("food.order.service.kotlin.micronaut.kotlin-library-conventions")
+
 }
 
 dependencies {
+    implementation(project(":orderservice:core"))
     implementation(project(":common"))
+    implementation("jakarta.validation:jakarta.validation-api:3.0.2")
+    implementation(project(mapOf("path" to ":common")))
 }
 
