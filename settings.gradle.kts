@@ -13,4 +13,4 @@ plugins {
 }
 
 rootProject.name = "food-order-service-kotlin-micronaut"
-include("app", "list", "utilities")
+include("app", "common")
